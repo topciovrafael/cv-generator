@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  width: 100%;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: rgb(250, 244, 249);
+
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+fieldset{
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+fieldset>label{
+  margin: 50px;
+}
+
+textarea {
+  resize: none;
+}
+
+
+input{
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  margin: 5px;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  color: black;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
+
+}
+
+form {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+}
+
+fieldset {
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+/* General form styles */
+form {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  font-family: "Montserrat", sans-serif;
+}
+
+fieldset {
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  width: 90%; /* Ensure fieldset takes full width */
+}
+
+/* General layout for form fields */
+fieldset div {
+  display: flex;
+  align-items: center; /* Centers the label vertically relative to input */
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+/* General label styles */
+label {
+  flex-shrink: 0; /* Prevent the label from shrinking */
+  text-align: right;
+  padding-right: 10px; /* Space between label and input */
+  min-width: 150px; /* Minimum width for the label */
+  font-weight: 500;
+}
+
+/* General input styles */
+input {
+  flex-grow: 1; /* Ensures all inputs have the same width */
+  width: 100%;  /* Full width to align all inputs */
+  max-width: 300px; /* Set a max-width for better control */
+  padding: 5px;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* General header style for all forms */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+body{
+  margin: 0;
+}
+
+#cv-header {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem; 
+  background: linear-gradient(to right top, #7ea1d6, #046985, #00d7d9, #00e88f, #a8eb12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  height: 2em;
+  margin-left: 100px;
+  margin-bottom: 35px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  width: 60px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(182, 182, 182);
+  transition: .4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 8px;
+  left: 0.3em;
+  bottom: 0.3em;
+  transform: rotate(270deg);
+  background-color: rgb(255, 255, 255);
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #00d9b5;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+#adaugare-experienta {
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 100px;
+  background-color: #00d9b5;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+}
+
+input:focus{
+  border-bottom: 2px solid #00d9b5;
+  transition: 0.25s;
+}
+
+input:not(:focus){
+  border-bottom: 2px solid gray;
+  transition: 0.2s;
+}
+
+.laform{
+  margin: 0;
+}
+
+.dkm{
+  background-color: #242424;
+}
+
+.dark-mode{
+  background-color: #1d1d1d;
+}
+
+.dkm textarea {
+  background-color: #333; 
+  color: white;
+}
+
+.dkm input::placeholder {
+  color: #9b9b9b;
+}
+
+.dkm input{
+  color: white;
+}
+
+.dkm fieldset{
+  background-color: #272727;
+}
+
+#tot{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+#clseditor{
+  display: flex;
+  flex-direction: column;
+}
+
+#tot:first-child{
+
+}
+
+:root{
+  overflow-x: hidden;
+}
+
+#tot{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+
+}
+
+#preview-bg{
+  width: 100%;
+  height: 100vh;
+  overflow:hidden;
+}
+
+#stanga{
+  margin: 0 2.5%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+:root, body, #tot {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tot {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+#stanga {
+  min-width:550px;
+  max-width:550px; /* Set a fixed width */
+  height: 100%; 
+  overflow-y: auto; /* Scroll vertically if content exceeds height */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+
+#preview-bg {
+  height: 100%; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2.5%;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid rgb(45, 150, 255);
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; 
+}
+
+.scrollable {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+.scrollable:hover {
+  scrollbar-color: #555 transparent;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: #444;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: #5c5c5c;
+}
+
+body.dark-mode .scrollable {
+  scrollbar-color: #444 transparent;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+body.light-mode .scrollable {
+  scrollbar-color: #888 transparent;
+}
+
+#foaie {
+  width: 630px; /* Set a width percentage for smaller size */
+  max-width: 210mm; /* A4 width in mm */
+  height: auto; /* Automatically adjust height */
+  aspect-ratio: 210 / 297; /* A4 aspect ratio (width / height) */
+  background-color:white; /* Default background */
+  box-shadow: 
+      0 4px 4px rgba(0, 0, 0, 0.25),  /* Bottom shadow */
+      0 -4px 4px rgba(0, 0, 0, 0.1), /* Top shadow */
+      4px 0 4px rgba(0, 0, 0, 0.1),  /* Right shadow */
+      -4px 0 4px rgba(0, 0, 0, 0.1); /* Left shadow */
+  pointer-events: none;
+  user-select: none;
+      margin: auto; /* Center the element */
+      display: flex;  
+}
+
+
+body.dark-mode #foaie{
+  box-shadow: 
+      0 4px 4px rgba(255, 255, 255, 0.05),  /* Bottom shadow */
+      0 -4px 4px rgba(255, 255, 255, 0.05), /* Top shadow */
+      4px 0 4px rgba(255, 255, 255, 0.05),  /* Right shadow */
+      -4px 0 4px rgba(255, 255, 255, 0.05);
+}
+
+body.light-mode #preview-bg {
+  
+}
+
+#download {
+  position: absolute;
+  bottom: 5%; /* Adjust the top position as needed */
+  right: 3%; /* Adjust the right position as needed */
+  z-index: 10; /* Ensure it appears above other elements */
+  background-color: #00d9b5; /* Example background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 50%; /* Rounded corners */
+  cursor: pointer; /* Cursor change on hover */
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media print {
+  #foaie{
+    margin: 0;
+  }
+}
+
+/* Make sure preview always has a white background */
+#preview-bg {
+  color: #000000; /* Always black text */
+}
+
+/* Ensure specific elements within the preview are not affected by dark mode */
+
+
+#banda{
+  width: 40%;
+  background-color: #003536;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#preview-nume, #preview-title,#preview-summary, #header-skilluri, .skilluri{
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: white;
+  margin-top: 7%;
+}
+
+#preview-title, #preview-summary{
+  font-size: 1.2em;
+  margin-top: 0%;
+  margin: 8%;
+}
+#preview-summary{
+  font-size: 1em;
+  margin: 7%;
+}
+
+#header-skilluri{
+  font-size: 1.4em;
+  margin: 8%;
+}
+
+.skilluri{
+  margin-top: 0;
+  margin: 2%;
+  font-size: 1.1em;
+}
+
+#ptmail, #ptphone, #ptlocation, #ptweb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#ptmail>*, #ptphone>*, #ptlocation>*, #ptweb>*{
+  color: white;
+  font-size: 1em;
+  margin: 1%;
+}
+
+#restu{
+  display: flex;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 60%;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+#preview-work,#preview-school{
+  width: 90%;
+  margin: 5.5%;
+}
+
+#descriere,#link{
+  margin: 3%;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+#link{
+  text-decoration: underline;
+}
+
+#titlu-preview-work,#titlu-preview-school{
+  border-bottom: 2px solid black;
+}
+
+#work-sub-sub,#school-sub-sub{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#job-descriere,#school-descriere{
+    text-align: left; /* Align text to the left */
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+#companie,#sectie{
+  text-align: left;
+}
