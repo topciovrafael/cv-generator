@@ -3,6 +3,10 @@ This CV Generator is a dynamic web application built with React, designed to hel
 
 # Key Features:
 Dynamic Form Components: Easily add or remove sections like Education and Work Experience as needed.
+
 Responsive Design: Ensures that the generated CV looks great on any device.
+
 Real-Time Preview: View changes in real-time as you fill out your information.
+
 Customizable Templates: Choose from various CV templates to suit your style.
+
