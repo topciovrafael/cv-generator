@@ -31,7 +31,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
   background-color: rgb(250, 244, 249);
 
@@ -583,4 +582,17 @@ body.light-mode #preview-bg {
 }
 #companie,#sectie{
   text-align: left;
+}
+
+@media (max-width: 480px) {
+  #tot{
+    flex-direction: column;
+  }
+  #preview-bg{
+    display: none;
+  }
+
+  #stanga{
+    align-self: center;
+  }
 }
