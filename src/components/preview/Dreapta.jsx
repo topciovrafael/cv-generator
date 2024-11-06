@@ -13,7 +13,7 @@ function Dreapta(props){
                         <div id="work-sub-titlu">
                             <div id="work-sub-sub">
                                 <div id="informatii-job">
-                                <div id="pozitie">Recruiting Intern</div>
+                                <div id="pozitie">Sclav pe plantatie</div>
                                 </div>
                                 
                                 <div id="durata">Oct. 2018 - Present</div>

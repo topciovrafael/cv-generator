@@ -79,7 +79,7 @@ function WorkInfo(props){
 
                 <div>
                 <label htmlFor="addWorkInfo">
-                Job responsibilities:
+                Job Duties:
                 </label>
                 <textarea name="addWorkInfo" id="input-addWorkInfo" cols="30" rows="10" onChange={handleChange}
                 value={data.addWorkInfo}></textarea>

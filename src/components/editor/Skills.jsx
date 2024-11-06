@@ -5,7 +5,8 @@ function Skills(props){
         <form className="skills">
             <h2 className="header-skills">Skills</h2>
             <fieldset className="fieldset-skills">
-                <div><label htmlFor="skill">
+                <div id="skills-loc">
+                    <div><label htmlFor="skill">
                     Add a skill:
                 </label>
                 <input
@@ -15,7 +16,8 @@ function Skills(props){
                 onChange={handleChange}
                 value={data.skill}
                 placeholder=""
-                />
+                /></div>
+            
                 <button type="button" id="adaugare-experienta">+</button>
                 </div>
             </fieldset>
