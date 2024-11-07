@@ -1,5 +1,5 @@
 function Skills(props){
-    const {data,handleChange}=props;
+    const {data,handleChange, addSkill}=props;
 
     return(
         <form className="skills">
@@ -18,7 +18,7 @@ function Skills(props){
                 placeholder=""
                 /></div>
             
-                <button type="button" id="adaugare-experienta">+</button>
+                <button type="button"  id="adaugare-skill" onClick={addSkill}>+</button>
                 </div>
             </fieldset>
         </form>

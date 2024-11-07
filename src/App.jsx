@@ -10,6 +10,7 @@ import { mdiEyeOutline } from '@mdi/js';
 import './App.css';
 
 function App() {
+  document.title = 'cv generator';
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -67,6 +68,23 @@ function App() {
       addInfo: ""
     });
   };
+
+  const addSkill = () => {
+    setData((prevData) => {
+      if (prevData.skill.trim() === "") return prevData; // Avoid adding empty skills
+  
+      const updatedSkills = [...prevData.skills, prevData.skill];
+  
+      console.log("Updated skills:", updatedSkills); // Log the updated skills array
+  
+      return {
+        ...prevData,
+        skills: updatedSkills,
+        skill: "", // Clear the input after adding the skill
+      };
+    });
+  };
+  
 
   const handleCheckboxChange = (e) => {
     const fieldsets = document.querySelectorAll('fieldset');

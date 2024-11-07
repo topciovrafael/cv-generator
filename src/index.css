@@ -242,7 +242,7 @@ body{
   color: white;
 }
 
-#adaugare-experienta {
+#adaugare-experienta,#adaugare-skill, #adaugare-educatie {
   color: #fff;
   padding: 15px 25px;
   border-radius: 100px;
@@ -603,7 +603,7 @@ textarea{
     align-items: center;
   }
   #preview-bg{
-    display: auto;
+    display: none;
     position: absolute;
     font-size: 0.6rem;
   }
@@ -639,11 +639,16 @@ textarea{
     bottom: 2%;
   }
   #download{
-    display: flex;
-  }
-  #see{
     display: none;
   }
+  #see{
+    display: flex;
+  }
 
-  
+}
+
+@media (min-width:480px) and (max-width: 1200px){
+  #preview-bg{
+    font-size: 0.85rem;
+  }
 }

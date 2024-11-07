@@ -78,7 +78,7 @@ function EducationInfo({ data, handleChange, addEntry }) {
         </div>
 
         <button
-          id="adaugare-experienta"
+          id="adaugare-educatie"
           type="button"
           onClick={addEntry}
         >
