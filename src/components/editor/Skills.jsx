@@ -1,5 +1,6 @@
 function Skills(props){
-    const {data,handleChange, addSkill}=props;
+    const {data,handleChange, addSkill, removeSkill}=props;
+    const { skills } = data;
 
     return(
         <form className="skills">
@@ -20,6 +21,21 @@ function Skills(props){
             
                 <button type="button"  id="adaugare-skill" onClick={addSkill}>+</button>
                 </div>
+                <div id="skills-list">
+                {skills.map((skill, index) => (
+                <div key={index} className="skill-tab">
+                <span>{skill}</span>
+                <button
+                type="button"
+                id="remove-skill"
+                className="remove-skill-btn"
+                onClick={() => removeSkill(index)}
+                >
+                &#x2715;
+              </button>
+            </div>
+          ))}
+        </div>
             </fieldset>
         </form>
     );

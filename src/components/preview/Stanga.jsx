@@ -15,22 +15,22 @@ function Stanga(props) {
             <div id="preview-summary">{summary}</div>
 
             <div id='ptmail'>
-                <Icon path={mdiEmail} size={1} />
+                <Icon path={mdiEmail} size={.9} />
                 <div id="afisare-email">{email}</div>
             </div>
 
             <div id='ptphone'>
-                <Icon path={mdiPhone} size={1} />
+                <Icon path={mdiPhone} size={.9} />
                 <div id="afisare-phone">{phone}</div>
             </div>
 
             <div id='ptlocation'>
-                <Icon path={mdiMapMarker} size={1} />
+                <Icon path={mdiMapMarker} size={.9} />
                 <div id="afisare-location">{location}</div>
             </div>
 
             <div id='ptweb'>
-                <Icon path={mdiWeb} size={1} />
+                <Icon path={mdiWeb} size={.9} />
                 <div id="afisare-web">{website}</div>
             </div>
 

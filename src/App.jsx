@@ -25,8 +25,10 @@ function App() {
     dateWorkStart: "",
     dateWorkEnd: "",
     addWorkInfo: "",
+    skill: "",
     skills: []
   });
+  
 
   const [educationData, setEducationData] = useState({
     university: "",
@@ -84,6 +86,15 @@ function App() {
       };
     });
   };
+  const removeSkill = (index) => {
+    setData((prevData) => {
+      const updatedSkills = prevData.skills.filter((_, i) => i !== index);
+      return {
+        ...prevData,
+        skills: updatedSkills,
+      };
+    });
+  };
   
 
   const handleCheckboxChange = (e) => {
@@ -104,7 +115,7 @@ function App() {
 
   const downloadResume = () => {
     const input = document.getElementById('foaie');
-    html2canvas(input, { scale: 10, backgroundColor: null }).then((canvas) => {
+    html2canvas(input, { scale: 3, backgroundColor: null }).then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
       const widthInMm = 210; // A4 width in mm
@@ -131,6 +142,8 @@ function App() {
           educationData={educationData}
           handleEducationChange={handleEducationChange}
           addEducationEntry={addEducationEntry}
+          addSkill={addSkill}
+          removeSkill={removeSkill}
         />
       </div>
       <Preview data={data} educationEntries={educationEntries} />
