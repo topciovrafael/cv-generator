@@ -1,6 +1,13 @@
 import React from 'react';
 
 function PreviewWork({ title, workplace, dateWorkStart, dateWorkEnd, addWorkInfo }) {
+  const formatDate = (date) => {
+    if (!date) return '';
+    const [year, month] = date.split('-');
+    const dateObject = new Date(year, month - 1);
+    return dateObject.toLocaleString('default', { month: 'long', year: 'numeric' });
+  };
+
   return (
     <div id="work-sub-titlu">
       <div id="work-sub-sub">
@@ -8,7 +15,7 @@ function PreviewWork({ title, workplace, dateWorkStart, dateWorkEnd, addWorkInfo
           <div id="pozitie">{title}</div>
         </div>
         <div id="durata">
-          {dateWorkStart} - {dateWorkEnd ? dateWorkEnd : "Present"}
+          {formatDate(dateWorkStart)} - {dateWorkEnd ? formatDate(dateWorkEnd) : "Present"}
         </div>
       </div>
       <div id="companie">{workplace}</div>

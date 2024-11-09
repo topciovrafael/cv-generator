@@ -17,7 +17,7 @@ function Editor(props) {
         handleChange={props.handleEducationChange}
         addEntry={props.addEducationEntry}
       />
-      <WorkInfo data={props.data} handleChange={props.handleChange} />
+      <WorkInfo data={props.data} handleChange={props.handleChange} addWorkExperience={props.addWorkExperience}/>
     </div>
   );
 }

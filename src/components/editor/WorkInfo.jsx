@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 
 function WorkInfo(props){
-    const {data,handleChange}=props;
+    const {data,handleChange,addWorkExperience}=props;
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -10,6 +11,19 @@ function WorkInfo(props){
     setIsChecked(e.target.checked);
   };
 
+  const checkIfFieldsAreValid = () => {
+    const { title, workplace, dateWorkStart, dateWorkEnd } = data;
+    if (!title || !workplace || !dateWorkStart) return false;
+    if (!isChecked && !dateWorkEnd) return false;
+    return true;
+  };
+
+
+  useEffect(() => {
+    setIsButtonDisabled(!checkIfFieldsAreValid());
+  }, [data, isChecked]);
+
+  
     return(
         <form className="work-info">
             <h2 className="header-work-info">Work Experience</h2>
@@ -24,6 +38,7 @@ function WorkInfo(props){
                 onChange={handleChange}
                 value={data.title}
                 placeholder="Web Developer"
+                required
                 /></div>
                 <div><label htmlFor="workplace">
                 Workplace:
@@ -49,6 +64,7 @@ function WorkInfo(props){
                 onChange={handleChange}
                 value={data.dateWorkStart}
                 placeholder=""
+                required
                 />
                 </div>
                 <div><label htmlFor="university">
@@ -73,6 +89,7 @@ function WorkInfo(props){
                             onChange={handleChange}
                             value={data.dateWorkEnd}
                             placeholder=""
+                            required
                         />
                     </div>
                 )}
@@ -84,7 +101,14 @@ function WorkInfo(props){
                 <textarea name="addWorkInfo" id="input-addWorkInfo" cols="30" rows="10" onChange={handleChange}
                 value={data.addWorkInfo}></textarea>
                 </div>
-                <button id="adaugare-experienta" type="button" onClick={()=>console.log(props)}>Add</button> 
+                <button
+                id="adaugare-experienta"
+                type="button"
+                onClick={addWorkExperience}
+                disabled={isButtonDisabled}
+                >
+                Add
+                </button>
             </fieldset>
         </form>
         

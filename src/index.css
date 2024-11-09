@@ -671,6 +671,10 @@ input:active {
   margin-top: 4%;
 }
 
+button:disabled{
+  opacity: 0.5;
+}
+
 @media (max-width: 1200px) {
   #tot{
     flex-direction: column;

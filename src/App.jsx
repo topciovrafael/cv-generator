@@ -59,9 +59,9 @@ function App() {
     }));
   };
 
-  const toggleOverlay = () => {
+ /*  const toggleOverlay = () => {
     setIsOverlayVisible((prev) => !prev);
-  };
+  }; */
 
   useEffect(() => {
     const handleResize = () => {
@@ -120,6 +120,26 @@ function App() {
       };
     });
   };
+
+  const addWorkExperience = () => {
+    setWorkExperiences((prevExperiences) => [
+      ...prevExperiences,
+      { ...data } // Add current work experience details from the data state
+    ]);
+  
+    // Optionally, clear relevant fields in data state after adding the experience
+    setData((prevData) => ({
+      ...prevData,
+      title: "",
+      workplace: "",
+      dateWorkStart: "",
+      dateWorkEnd: "",
+      addWorkInfo: "",
+    }));
+    console.log("Work Experiences:", workExperiences);
+  };
+  
+
   const removeSkill = (index) => {
     setData((prevData) => {
       const updatedSkills = prevData.skills.filter((_, i) => i !== index);
@@ -149,11 +169,11 @@ function App() {
 
   const downloadResume = () => {
     const input = document.getElementById('foaie');
-    html2canvas(input, { scale: 3, backgroundColor: null }).then((canvas) => {
+    html2canvas(input, { scale: 6, backgroundColor: null }).then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
       const widthInMm = 210; // A4 width in mm
-      const heightInMm = (canvas.height * widthInMm) / canvas.width;
+      const heightInMm = (canvas.height * widthInMm) / canvas.width -1;
 
       pdf.addImage(imgData, 'PNG', 0, 0, widthInMm, heightInMm);
       pdf.save('resume.pdf');
@@ -183,6 +203,8 @@ function App() {
     console.log(i);
   }
 
+
+  
   return (
     <div id="tot">
       <div id='stanga'>
@@ -201,9 +223,10 @@ function App() {
           addEducationEntry={addEducationEntry}
           addSkill={addSkill}
           removeSkill={removeSkill}
+          addWorkExperience={addWorkExperience}
         />
       </div>
-      <Preview data={data} workExperiences={workExperiences} educationEntries={[]} />
+      <Preview data={data} workExperiences={workExperiences} educationEntries={[]}  />
 
       <button id="download" onClick={downloadResume}>
         <Icon path={mdiDownload} size={2} />
