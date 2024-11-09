@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Editor from './components/editor/Editor';
 import Preview from './components/preview/Preview';
 import Icon from '@mdi/react';
@@ -11,6 +11,7 @@ import './App.css';
 
 function App() {
   document.title = 'cv generator';
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -56,6 +57,38 @@ function App() {
       [name]: value,
     }));
   };
+
+  const toggleOverlay = () => {
+    setIsOverlayVisible((prev) => !prev);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1200) {
+        const butonDownload=document.getElementById("download");
+        const ceata=document.getElementById("overlay");
+        ceata.style.opacity='0';
+      document.getElementById("preview-bg").style.display="flex";
+      document.getElementById("download").style.display='flex';
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1200 && document.getElementById("preview-bg").style.display==="flex") {
+        const ceata=document.getElementById("overlay");
+        ceata.style.opacity='1';
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   const addEducationEntry = () => {
     setEducationEntries((prevEntries) => [
@@ -126,6 +159,25 @@ function App() {
     });
   };
 
+  let i=0;
+
+  const seeFunc=()=>{
+    const butonDownload=document.getElementById("download");
+    const ceata=document.getElementById("overlay");
+    if(i%2==0 || i==0){
+      butonDownload.style.display='flex';
+      ceata.style.opacity='1';
+      document.getElementById("preview-bg").style.display="flex";
+      i++;
+    }
+    else{
+      butonDownload.style.display='none';
+      document.getElementById("preview-bg").style.display="none";
+      ceata.style.opacity='0';
+      i++;
+    }
+  }
+
   return (
     <div id="tot">
       <div id='stanga'>
@@ -151,9 +203,10 @@ function App() {
       <button id="download" onClick={downloadResume}>
         <Icon path={mdiDownload} size={2} />
       </button>
-      <button id="see" onClick={downloadResume}>
+      <button id="see" onClick={seeFunc}>
       <Icon path={mdiEyeOutline} size={2} />
       </button>
+      <div id="overlay"></div>
     </div>
   );
 }
