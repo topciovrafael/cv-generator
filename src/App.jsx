@@ -164,6 +164,9 @@ function App() {
   const seeFunc=()=>{
     const butonDownload=document.getElementById("download");
     const ceata=document.getElementById("overlay");
+    if(i%2==0 && ceata.style.opacity=='1'){
+      i=1;
+    }
     if(i%2==0 || i==0){
       butonDownload.style.display='flex';
       ceata.style.opacity='1';
@@ -176,6 +179,7 @@ function App() {
       ceata.style.opacity='0';
       i++;
     }
+    console.log(i);
   }
 
   return (
