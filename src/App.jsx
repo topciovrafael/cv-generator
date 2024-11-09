@@ -40,6 +40,7 @@ function App() {
   });
 
   const [educationEntries, setEducationEntries] = useState([]);
+  const [workExperiences, setWorkExperiences] = useState([]);
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (e) => {
@@ -202,7 +203,7 @@ function App() {
           removeSkill={removeSkill}
         />
       </div>
-      <Preview data={data} educationEntries={educationEntries} />
+      <Preview data={data} workExperiences={workExperiences} educationEntries={[]} />
 
       <button id="download" onClick={downloadResume}>
         <Icon path={mdiDownload} size={2} />

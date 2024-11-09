@@ -2,12 +2,12 @@ import React from 'react';
 import Stanga from './Stanga';
 import Dreapta from './Dreapta';
 
-function Preview({ data, isOverlayVisible }) {
+function Preview({ data, workExperiences, educationEntries }) {
   return (
-    <div id="preview-bg" style={{}}>
+    <div id="preview-bg">
       <div id="foaie">
         <Stanga data={data} />
-        <Dreapta />
+        <Dreapta workExperiences={workExperiences} educationEntries={educationEntries} />
       </div>
     </div>
   );

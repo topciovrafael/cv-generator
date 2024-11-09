@@ -667,6 +667,10 @@ input:active {
   overflow: hidden;
 }
 
+#work-sub-titlu,#school-sub-titlu{
+  margin-top: 4%;
+}
+
 @media (max-width: 1200px) {
   #tot{
     flex-direction: column;
@@ -682,7 +686,7 @@ input:active {
 
   #stanga{
     align-self: center;
-    padding-left:12px;
+    padding-left:6px;
     width: 100vw
   }
   label{
@@ -695,6 +699,9 @@ input:active {
     align-items: center;
     justify-content: left;
   }
+
+
+
   input{
     width: 100%;
     flex-grow: 0;
