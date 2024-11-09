@@ -515,6 +515,7 @@ body.light-mode #preview-bg {
 
 
 #banda{
+  height:105%;
   width: 40%;
   background-color: #003536;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
