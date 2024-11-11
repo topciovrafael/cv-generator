@@ -515,6 +515,7 @@ body.light-mode #preview-bg {
 
 
 #banda{
+  height:115%;
   width: 40%;
   background-color: #003536;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -676,6 +677,9 @@ button:disabled{
 }
 
 @media (max-width: 1200px) {
+  body{
+    height: 100vh;
+  }
   #tot{
     flex-direction: column;
     align-items: center;

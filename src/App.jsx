@@ -173,7 +173,7 @@ function App() {
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
       const widthInMm = 210; // A4 width in mm
-      const heightInMm = (canvas.height * widthInMm) / canvas.width -1;
+      const heightInMm = (canvas.height * widthInMm) / canvas.width+1;
 
       pdf.addImage(imgData, 'PNG', 0, 0, widthInMm, heightInMm);
       pdf.save('resume.pdf');
