@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 
-function EducationInfo({ data, handleChange, addEducationEntry }) {
+function EducationInfo({ data, handleChange, addEducationEntry,educationEntries }) {
   const [isChecked, setIsChecked] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -97,6 +97,21 @@ function EducationInfo({ data, handleChange, addEducationEntry }) {
         >
           Add
         </button>
+        {/* <div id="universities-list">
+                {educationEntries.map((educationEntry, index) => (
+                <div key={index} className="universities-tab">
+                <span>{educationEntry.university}</span>
+                <button
+                type="button"
+                id="remove-uni"
+                className="remove-uni-btn"
+                //onClick={() => removeSkill(index)}
+                >
+                &#x2715;
+              </button>
+            </div>
+          ))}
+        </div> */}
       </fieldset>
     </form>
   );
