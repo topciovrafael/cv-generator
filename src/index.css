@@ -741,12 +741,26 @@ button:disabled{
 }
 
 @media (min-width:470px) and (max-width: 1200px){
+  #tot {
+    height: calc(100vh - env(safe-area-inset-bottom));
+  }
+
+  body, #tot {
+    min-height: 100vh;
+  }
   #preview-bg{
     font-size: 0.85rem;
   }
 }
 
 @media (max-width: 350px){
+  #tot {
+    height: calc(100vh - env(safe-area-inset-bottom));
+  }
+
+  body, #tot {
+    min-height: 100vh;
+  }
   #download{
     right: 35%;
   }
@@ -762,6 +776,13 @@ button:disabled{
 }
 
 @media (min-width:550px) and (max-width: 1200px){
+  #tot {
+    height: calc(100vh - env(safe-area-inset-bottom));
+  }
+
+  body, #tot {
+    min-height: 100vh;
+  }
   #download{
     right: 18%;
   }
