@@ -677,8 +677,12 @@ button:disabled{
 }
 
 @media (max-width: 1200px) {
-  body{
-    height: 100vh;
+  #tot {
+    height: calc(100vh - env(safe-area-inset-bottom));
+  }
+
+  body, #tot {
+    min-height: 100vh;
   }
   #tot{
     flex-direction: column;
