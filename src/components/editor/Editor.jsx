@@ -15,7 +15,7 @@ function Editor(props) {
       <EducationInfo
         data={props.educationData}
         handleChange={props.handleEducationChange}
-        addEntry={props.addEducationEntry}
+        addEducationEntry={props.addEducationEntry}
       />
       <WorkInfo data={props.data} handleChange={props.handleChange} addWorkExperience={props.addWorkExperience}/>
     </div>

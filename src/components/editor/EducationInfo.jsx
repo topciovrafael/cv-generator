@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
-function EducationInfo({ data, handleChange, addEntry }) {
+function EducationInfo({ data, handleChange, addEducationEntry }) {
   const [isChecked, setIsChecked] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   };
+
+  const checkIfFieldsAreValid = () => {
+    const { university, degree, dateStart, dateEnd } = data;
+    if (!university || !degree || !dateStart) return false;
+    if (!isChecked && !dateEnd) return false;
+    return true;
+  };
+
+  useEffect(() => {
+    setIsButtonDisabled(!checkIfFieldsAreValid());
+  }, [data, isChecked]);
 
   return (
     <form className="education-info">
@@ -80,7 +92,8 @@ function EducationInfo({ data, handleChange, addEntry }) {
         <button
           id="adaugare-educatie"
           type="button"
-          onClick={addEntry}
+          onClick={addEducationEntry}
+          disabled={isButtonDisabled}
         >
           Add
         </button>

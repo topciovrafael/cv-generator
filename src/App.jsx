@@ -226,7 +226,7 @@ function App() {
           addWorkExperience={addWorkExperience}
         />
       </div>
-      <Preview data={data} workExperiences={workExperiences} educationEntries={[]}  />
+      <Preview data={data} workExperiences={workExperiences} educationEntries={educationEntries}  />
 
       <button id="download" onClick={downloadResume}>
         <Icon path={mdiDownload} size={2} />
