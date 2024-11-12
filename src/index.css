@@ -685,6 +685,9 @@ html {
 }
 
 @media (max-width: 1200px) {
+  body, #tot{
+    max-height:95vh;
+    }
   body {
     min-height: -webkit-fill-available;
   }
