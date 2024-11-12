@@ -685,9 +685,6 @@ html {
 }
 
 @media (max-width: 1200px) {
-  html{
-    max-height-100vh
-    }
   body {
     min-height: -webkit-fill-available;
   }
