@@ -685,7 +685,7 @@ html {
 }
 
 @media (max-width: 1200px) {
-  body, #tot{
+  html, body, #tot{
     overflow: hidden;
     }
   body {
