@@ -305,6 +305,7 @@ input:not(:focus){
 }
 
 #tot{
+  position: relative;
   display: flex;
   justify-content: start;
   align-items: start;
