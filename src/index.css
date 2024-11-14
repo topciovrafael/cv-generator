@@ -709,6 +709,7 @@ html {
   }
 
   #stanga{
+    padding-top: 20%;
     align-self: center;
     padding-left:6px;
     width: 100vw;
