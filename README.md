@@ -8,7 +8,7 @@ Features:
 
 1. User-friendly interface that makes it easy to create a custom CV
 
-2. Add and edit sections such as basic information, contact information, education background, work experience, skills
+2. Add and remove sections such as basic information, contact information, education background, work experience, skills
 
 3. Preview your CV at any time to make sure it looks presentable and fitting to your needs
 
