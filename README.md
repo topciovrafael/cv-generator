@@ -1,23 +1,49 @@
-<<<<<<< HEAD
-# React + Vite
+# Project: CV Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[**Live version** of the site can be found here](https://cv-generator-blond.vercel.app)
 
-Currently, two official plugins are available:
+This CV Generator is a web application that allows users to create professional-looking CV's with ease. It is perfect for job seekers who want to stand out from the crowd and showcase their skills, experience, and achievements. Simply fill out the form in the app and the CV will be updated instantly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# CV GENERATOR!
-This CV Generator is a dynamic web application built with React, designed to help users create and customize their resumes effortlessly. The application features intuitive form components that allow users to input personal information, education details, work experience, and other relevant sections of a CV.
+Features:
 
-# Key Features:
-Dynamic Form Components: Easily add or remove sections like Education and Work Experience as needed.
+1. User-friendly interface that makes it easy to create a custom CV
 
-Responsive Design: Ensures that the generated CV looks great on any device.
+2. Add and edit sections such as basic information, contact information, education background, work experience, skills
 
-Real-Time Preview: View changes in real-time as you fill out your information.
+3. Preview your CV at any time to make sure it looks presentable and fitting to your needs
 
-Customizable Templates: Choose from various CV templates to suit your style.
+4. Responsive design that allows you to create a CV even through your phone
 
->>>>>>> 3c3a3d806f5c577f90b6547ae12348202aa4bb43
+### Built With
+
+- Vite + React
+- HTML5
+- CSS
+
+### Getting Started
+
+In order to setup and work on this project on your own, you will need to:
+
+1. Clone this project:  
+   `git clone https://github.com/topciovrafael/cv-generator.git`
+
+2. Once you have cloned this project, you can install the required dependencies by using:  
+   `npm install`
+
+3. A live demo of the project can be started by using:  
+   `npm run preview`
+
+4. Distribution files can be produced using:  
+   `npm run build`
+
+### Display
+
+![view 1](src/img/cv-dark-mode-view.png)
+CV Generator on dark mode
+
+![view 2](src/img/cv-light-mode-view.png)
+CV Generator on light mode
+
+---
+
+Developed by **Topciov Rafael**
