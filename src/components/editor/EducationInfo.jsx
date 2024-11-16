@@ -97,10 +97,13 @@ function EducationInfo({ data, handleChange, addEducationEntry,educationEntries 
         >
           Add
         </button>
-        {/* <div id="universities-list">
-                {educationEntries.map((educationEntry, index) => (
+        
+        
+        
+        <div id="universities-list">
+                {educationEntries?.map((educationEntry, index) => (
                 <div key={index} className="universities-tab">
-                <span>{educationEntry.university}</span>
+                <div>{educationEntry.university}</div>
                 <button
                 type="button"
                 id="remove-uni"
@@ -111,7 +114,7 @@ function EducationInfo({ data, handleChange, addEducationEntry,educationEntries 
               </button>
             </div>
           ))}
-        </div> */}
+        </div>
       </fieldset>
     </form>
   );

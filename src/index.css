@@ -557,19 +557,19 @@ body.light-mode #preview-bg {
   justify-content: center;
 }
 
-#remove-skill{
+#remove-skill,#remove-uni{
   background-color: inherit;
   color: inherit;
   margin: 5%;
 }
 
-#skills-list {
+#skills-list,#universities-list {
   display: flex;
   flex-wrap: wrap; /* Enables wrapping */
   gap: 10px; /* Adds spacing between skill items */
 }
 
-.skill-tab {
+.skill-tab,.universities-tab {
   display: flex;
   align-items: center;
   padding: 5px 10px;
