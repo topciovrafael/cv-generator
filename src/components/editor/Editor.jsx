@@ -16,8 +16,10 @@ function Editor(props) {
         data={props.educationData}
         handleChange={props.handleEducationChange}
         addEducationEntry={props.addEducationEntry}
+        educationEntries={props.educationEntries}
+        removeEd={props.removeEd}
       />
-      <WorkInfo data={props.data} handleChange={props.handleChange} addWorkExperience={props.addWorkExperience}/>
+      <WorkInfo data={props.data} handleChange={props.handleChange} addWorkExperience={props.addWorkExperience}  workExperiences={props.workExperiences} removeWork={props.removeWork}/>
     </div>
   );
 }

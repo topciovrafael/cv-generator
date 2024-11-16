@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 
 
 function WorkInfo(props){
-    const {data,handleChange,addWorkExperience}=props;
+    const {data,handleChange,addWorkExperience, workExperiences,removeWork}=props;
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const [isChecked, setIsChecked] = useState(false);
@@ -109,6 +109,23 @@ function WorkInfo(props){
                 >
                 Add
                 </button>
+
+                <div id="universities-list">
+                {workExperiences?.map((work, index) => (
+                <div key={index} className="universities-tab">
+                <div>{work.workplace}</div>
+                <button
+                type="button"
+                id="remove-uni"
+                className="remove-uni-btn"
+                onClick={() => removeWork(index)}
+                >
+                &#x2715;
+              </button>
+            </div>
+          ))}
+          
+        </div>
             </fieldset>
         </form>
         

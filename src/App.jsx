@@ -140,7 +140,7 @@ function App() {
   };
   
 
-  const removeSkill = (index) => {
+  const removeSkill = (index)   => {
     setData((prevData) => {
       const updatedSkills = prevData.skills.filter((_, i) => i !== index);
       return {
@@ -149,6 +149,21 @@ function App() {
       };
     });
   };
+
+  const removeEd = (index) => {
+    setEducationEntries((prevEntries) => {
+      const updatedEd = prevEntries.filter((_, i) => i !== index);
+      return updatedEd;
+    });
+  };
+
+  const removeWork = (index) => {
+    setWorkExperiences((prevExperiences) => {
+      const updatedWork = prevExperiences.filter((_, i) => i !== index);
+      return updatedWork;
+    });
+  };
+  
   
 
   const handleCheckboxChange = (e) => {
@@ -223,7 +238,11 @@ function App() {
           addEducationEntry={addEducationEntry}
           addSkill={addSkill}
           removeSkill={removeSkill}
+          removeEd={removeEd}
+          removeWork={removeWork}
           addWorkExperience={addWorkExperience}
+          educationEntries={educationEntries}
+          workExperiences={workExperiences}
         />
       </div>
       <Preview data={data} workExperiences={workExperiences} educationEntries={educationEntries}  />

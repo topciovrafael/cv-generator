@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 
-function EducationInfo({ data, handleChange, addEducationEntry,educationEntries }) {
+function EducationInfo({ data, handleChange, addEducationEntry,educationEntries, removeEd }) {
   const [isChecked, setIsChecked] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
@@ -108,12 +108,13 @@ function EducationInfo({ data, handleChange, addEducationEntry,educationEntries 
                 type="button"
                 id="remove-uni"
                 className="remove-uni-btn"
-                //onClick={() => removeSkill(index)}
+                onClick={() => removeEd(index)}
                 >
                 &#x2715;
               </button>
             </div>
           ))}
+          
         </div>
       </fieldset>
     </form>
