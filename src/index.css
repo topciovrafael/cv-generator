@@ -714,7 +714,6 @@ html {
   }
 
   html, body, #tot{
-    max-height:100vh;
     overflow: hidden;
     }
     #stanga{
@@ -722,7 +721,6 @@ html {
     }
 
   body {
-    min-height: -webkit-fill-available;
   }
   html {
     height: -webkit-fill-available;
@@ -738,9 +736,12 @@ html {
     width: 96%;
     margin-left: 2%;
   }
+  body{
+    max-height: 80vh;
+  }
+
 
   #stanga{
-    padding-top: 7%;
     align-self: center;
     padding-left:6px;
     width: 100vw;
