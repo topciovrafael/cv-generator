@@ -14,7 +14,7 @@ function ContactInfo(props){
                 id="input-email"
                 onChange={handleChange}
                 value={data.email}
-                placeholder="John"
+                placeholder="john.myers@example.com"
                 /></div>
                 <div><label htmlFor="lastName">
                     Phone number:
