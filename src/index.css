@@ -774,7 +774,7 @@ html {
   #download,#see{
     width: 75px;
     height: 75px;
-    bottom: 2%;
+    bottom: 10%;
   }
   #download{
     display: none;
