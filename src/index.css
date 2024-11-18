@@ -709,10 +709,18 @@ html {
 }
 
 @media (max-width: 1200px) {
+  #cv-header{
+    margin-top: 20%;
+  }
+
   html, body, #tot{
     max-height:100vh;
     overflow: hidden;
     }
+    #stanga{
+      overflow-x: hidden;
+    }
+
   body {
     min-height: -webkit-fill-available;
   }
@@ -800,6 +808,7 @@ body.dark-mode input:-webkit-autofill {
     font-size: 0.85rem;
   }
   #stanga{
+    overflow-x: hidden;
   }
 }
 
@@ -817,6 +826,9 @@ body.dark-mode input:-webkit-autofill {
   #preview-bg{
     font-size: 0.45rem;
   }
+  #stanga{
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width:350px) and (max-width: 550px){
@@ -830,6 +842,9 @@ body.dark-mode input:-webkit-autofill {
   html {
     height: -webkit-fill-available;
   }
+  #stanga{
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width:550px) and (max-width: 1200px){
@@ -842,5 +857,8 @@ body.dark-mode input:-webkit-autofill {
   }
   #download{
     right: 18%;
+  }
+  #stanga{
+    overflow-x: hidden;
   }
 }
