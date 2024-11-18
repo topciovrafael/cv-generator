@@ -713,7 +713,9 @@ html {
     margin-top: 20%;
   }
 
-  html, body, #tot{
+  html, body, #tot,#stanga{
+    max-height: 100%;
+    max-width: 100%;
     overflow: hidden;
     }
     #stanga{
@@ -736,9 +738,7 @@ html {
     width: 96%;
     margin-left: 2%;
   }
-  body{
-    max-height: 80vh;
-  }
+
 
 
   #stanga{
